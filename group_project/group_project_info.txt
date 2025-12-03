@@ -1,0 +1,84 @@
+Project A — Membership Inference Attack — LM (DistilBERT / Partial AG News)
+You are given a trained victim model (victim_model_distilbert_agnews) for AG News (4 classes) and a shadow pool (sampled.csv) of unlabeled or labeled examples drawn from the same distribution as the victim training data.
+
+Your task is to implement membership inference attacks. Produce per-sample member/non-member predictions in the required format.
+
+Provided files
+victim_model_distilbert_agnews/ — saved Hugging Face model & tokenizer (victim).
+
+sampled.csv — shadow pool (examples from same distribution).
+
+validation_samples.csv — small labeled text subset for local validation. Columns: text, label (0–3).
+
+validation_results.txt — ground-truth membership labels for validation_samples.csv. Space-separated two columns per line:
+
+<id> <member>
+where <id> is zero-based index into validation_samples.csv and <member> is 1 for member, 0 for non-member.
+
+Task
+Implement membership inference attacks (loss-threshold and/or shadow-model attack) against the provided victim_model_distilbert_agnews.
+
+Produce mia_lm_results.txt — predictions for the LM evaluation set.
+
+Notes
+If you train shadow models, use sampled.csv (shadow pool); document how shadows were created (disjoint vs with replacement), architecture, and hyperparameters.
+
+validation_samples.csv + validation_results.txt are for algorithm testing and calibration only. Do not use them for final tuning.
+
+Required outputs
+Predictions file — plain text, space-separated, no header. Each line corresponds to one sample in the evaluation set in exactly the evaluation file’s order:
+
+<id> <member>
+<id>: zero-based index in the evaluation dataset (0, 1, 2, …).
+
+<member>: 1 = predict member, 0 = predict non-member.
+
+Example lines:
+
+0 1
+1 0
+2 0
+Filename conventions: Language Model project: mia_lm_results.txt (one line per sample in sample.csv).
+
+Code / notebook — runnable and documented (e.g., notebook.ipynb or run_attack.py). Include exact commands and environment in README.md. The grader must be able to re-run your attack with minimal effort.
+
+Report — report.pdf (≤3 pages). Include objective, data & model descriptions, methods, metrics, and a short discussion.
+
+Provide README.md that explains how to execute it.
+
+Evaluation
+The grader will validate your predictions file format and compute:
+Primary metric — F1-score (member).
+Secondary metrics—precision, recall.
+
+Grading includes: correct file format, code reproducibility, explanation & analysis in the report, and result quality.
+
+========================================= update =============================================
+
+Hello everyone,
+We have updated the evaluation metrics for the Membership Inference Attack project to ensure a fairer assessment given the 
+imbalanced dataset (approximately 80% non-members, 20% members).
+
+Metric:
+Primary metric:
+ROC AUC (Receiver Operating Characteristic Area Under Curve)
+
+This measures how well your attack distinguishes between members and non-members, independent of class imbalance. What is ROC AUC?
+
+Secondary metrics:
+F1-score (member class) – assesses the balance between precision and recall for member detection.
+Precision – measures how many predicted members are correct.
+Recall – measures how many true members your attack successfully detects.
+
+Be aware, submissions that only predict “0” (non-member for all samples) will now receive very low ROC AUC and F1 scores, even if the accuracy appears high.
+
+Fine Tuning:
+Possible parameters: 
+    Number of shadows, 
+    Shadow lr, 
+    Number of epochs while training shadow
+    attack model design
+    attack_lr, 
+    attach_epochs
+
+There are many hyper parameters

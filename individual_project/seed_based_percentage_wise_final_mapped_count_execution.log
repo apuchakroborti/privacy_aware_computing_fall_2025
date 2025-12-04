@@ -1,0 +1,869 @@
+All arguments:
+ Namespace(ga='/home/achakroborti1/PWAC_FALL25/individual_project/data/validation_dataset/validation_G1.edgelist.txt', gu='/home/achakroborti1/PWAC_FALL25/individual_project/data/validation_dataset/validation_G2.edgelist.txt', seeds='/home/achakroborti1/PWAC_FALL25/individual_project/data/validation_dataset/validation_seed_mapping.txt', out_dir='./seed_based_outputs', theta=0.5, max_iters=50, nodetype='str', nruns=None, seedp=0.9, validation='/home/achakroborti1/PWAC_FALL25/individual_project/data/validation_dataset/validation_seed_mapping.txt', bf='True', multiple_run='False')
+Loading graphs...
+Raw edge data, Ga: 
+Graph with 5242 nodes and 14496 edges
+Raw edge data, Gu: 
+Graph with 5242 nodes and 14496 edges
+Loaded Ga: 5242 nodes, 14496 edges
+Labeled edge data, Ga: 
+Graph with 5242 nodes and 14496 edges
+Loaded Gu: 5242 nodes, 14496 edges
+Labeled edge data, Gu: 
+Graph with 5242 nodes and 14496 edges
+Inside seed_percentage_based_evaluate_brute_force_propagation_experiment, out_dir: ./seed_based_outputs
+All seed map: length of seed_map: 5242
+seed_percentage_based_evaluate_brute_force_propagation_experiment:: loaded seed_map
+
+
+==================== Evaluation Run 10.0 percent =============
+seed map: length of seed_count: 524
+Saved 524 random seeds to ./seed_based_outputs/random_10.0_percent_seeds.txt
+
+Entering: run_propagation_until_converged ...
+============Inside run_propagation_until_converged =============
+Parameters: theta: 0.5, max_outer_iters: 50, out_dir: ./seed_based_outputs/run_10.0_percent_logs, save_every_iter: False
+length of mapping: 524
+Number of nodes_a_list: 5242
+Number of nodes_u_list: 5242
+======== Propagation outer iteration 1 ========
+Previous mapping size: 524
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 524, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 524
+Ga->Gu added 499 new pairs; total mapped now 1023
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 1023
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 1023, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 1023
+propagation_step --> length of inv_map: 1541, new2: 518
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 518 new pairs; total mapped now 1541
+1017 new pairs added in 1 outer iteration.
+From 524 to total: 1541 in 1 outer iteration. continue ...
+
+
+======== Propagation outer iteration 2 ========
+Previous mapping size: 1541
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 1541, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 1541
+Ga->Gu added 381 new pairs; total mapped now 1922
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 1922
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 1922, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 1922
+propagation_step --> length of inv_map: 2123, new2: 201
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 201 new pairs; total mapped now 2123
+582 new pairs added in 2 outer iteration.
+From 1541 to total: 2123 in 2 outer iteration. continue ...
+
+
+======== Propagation outer iteration 3 ========
+Previous mapping size: 2123
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 2123, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 2123
+Ga->Gu added 88 new pairs; total mapped now 2211
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 2211
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 2211, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 2211
+propagation_step --> length of inv_map: 2285, new2: 74
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 74 new pairs; total mapped now 2285
+162 new pairs added in 3 outer iteration.
+From 2123 to total: 2285 in 3 outer iteration. continue ...
+
+
+======== Propagation outer iteration 4 ========
+Previous mapping size: 2285
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 2285, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 2285
+Ga->Gu added 11 new pairs; total mapped now 2296
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 2296
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 2296, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 2296
+propagation_step --> length of inv_map: 2296, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 2296
+11 new pairs added in 4 outer iteration.
+From 2285 to total: 2296 in 4 outer iteration. continue ...
+
+
+======== Propagation outer iteration 5 ========
+Previous mapping size: 2296
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 2296, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 2296
+Ga->Gu added 0 new pairs; total mapped now 2296
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 2296
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 2296, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 2296
+propagation_step --> length of inv_map: 2296, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 2296
+No new pairs added in this outer iteration. Converged.
+Completed: run_propagation_until_converged for the seed percentage: 10.0 percent
+
+Percentage=10.0, TP=2296, Total final mapping=2296,  Precision=1.0000, Recall=0.4380, Accuracy=0.4380====
+
+
+
+
+==================== Evaluation Run 20.0 percent =============
+seed map: length of seed_count: 1048
+Saved 1048 random seeds to ./seed_based_outputs/random_20.0_percent_seeds.txt
+
+Entering: run_propagation_until_converged ...
+============Inside run_propagation_until_converged =============
+Parameters: theta: 0.5, max_outer_iters: 50, out_dir: ./seed_based_outputs/run_20.0_percent_logs, save_every_iter: False
+length of mapping: 1048
+Number of nodes_a_list: 5242
+Number of nodes_u_list: 5242
+======== Propagation outer iteration 1 ========
+Previous mapping size: 1048
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 1048, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 1048
+Ga->Gu added 1227 new pairs; total mapped now 2275
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 2275
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 2275, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 2275
+propagation_step --> length of inv_map: 2843, new2: 568
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 568 new pairs; total mapped now 2843
+1795 new pairs added in 1 outer iteration.
+From 1048 to total: 2843 in 1 outer iteration. continue ...
+
+
+======== Propagation outer iteration 2 ========
+Previous mapping size: 2843
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 2843, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 2843
+Ga->Gu added 165 new pairs; total mapped now 3008
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 3008
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 3008, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3008
+propagation_step --> length of inv_map: 3034, new2: 26
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 26 new pairs; total mapped now 3034
+191 new pairs added in 2 outer iteration.
+From 2843 to total: 3034 in 2 outer iteration. continue ...
+
+
+======== Propagation outer iteration 3 ========
+Previous mapping size: 3034
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 3034, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3034
+Ga->Gu added 8 new pairs; total mapped now 3042
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 3042
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 3042, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3042
+propagation_step --> length of inv_map: 3047, new2: 5
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 5 new pairs; total mapped now 3047
+13 new pairs added in 3 outer iteration.
+From 3034 to total: 3047 in 3 outer iteration. continue ...
+
+
+======== Propagation outer iteration 4 ========
+Previous mapping size: 3047
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 3047, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3047
+Ga->Gu added 0 new pairs; total mapped now 3047
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 3047
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 3047, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3047
+propagation_step --> length of inv_map: 3047, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 3047
+No new pairs added in this outer iteration. Converged.
+Completed: run_propagation_until_converged for the seed percentage: 20.0 percent
+
+Percentage=20.0, TP=3047, Total final mapping=3047,  Precision=1.0000, Recall=0.5813, Accuracy=0.5813====
+
+
+
+
+==================== Evaluation Run 30.0 percent =============
+seed map: length of seed_count: 1572
+Saved 1572 random seeds to ./seed_based_outputs/random_30.0_percent_seeds.txt
+
+Entering: run_propagation_until_converged ...
+============Inside run_propagation_until_converged =============
+Parameters: theta: 0.5, max_outer_iters: 50, out_dir: ./seed_based_outputs/run_30.0_percent_logs, save_every_iter: False
+length of mapping: 1572
+Number of nodes_a_list: 5242
+Number of nodes_u_list: 5242
+======== Propagation outer iteration 1 ========
+Previous mapping size: 1572
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 1572, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 1572
+Ga->Gu added 1584 new pairs; total mapped now 3156
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 3156
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 3156, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3156
+propagation_step --> length of inv_map: 3469, new2: 313
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 313 new pairs; total mapped now 3469
+1897 new pairs added in 1 outer iteration.
+From 1572 to total: 3469 in 1 outer iteration. continue ...
+
+
+======== Propagation outer iteration 2 ========
+Previous mapping size: 3469
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 3469, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3469
+Ga->Gu added 42 new pairs; total mapped now 3511
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 3511
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 3511, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3511
+propagation_step --> length of inv_map: 3520, new2: 9
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 9 new pairs; total mapped now 3520
+51 new pairs added in 2 outer iteration.
+From 3469 to total: 3520 in 2 outer iteration. continue ...
+
+
+======== Propagation outer iteration 3 ========
+Previous mapping size: 3520
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 3520, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3520
+Ga->Gu added 5 new pairs; total mapped now 3525
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 3525
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 3525, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3525
+propagation_step --> length of inv_map: 3525, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 3525
+5 new pairs added in 3 outer iteration.
+From 3520 to total: 3525 in 3 outer iteration. continue ...
+
+
+======== Propagation outer iteration 4 ========
+Previous mapping size: 3525
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 3525, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3525
+Ga->Gu added 0 new pairs; total mapped now 3525
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 3525
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 3525, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3525
+propagation_step --> length of inv_map: 3525, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 3525
+No new pairs added in this outer iteration. Converged.
+Completed: run_propagation_until_converged for the seed percentage: 30.0 percent
+
+Percentage=30.0, TP=3525, Total final mapping=3525,  Precision=1.0000, Recall=0.6725, Accuracy=0.6725====
+
+
+
+
+==================== Evaluation Run 40.0 percent =============
+seed map: length of seed_count: 2096
+Saved 2096 random seeds to ./seed_based_outputs/random_40.0_percent_seeds.txt
+
+Entering: run_propagation_until_converged ...
+============Inside run_propagation_until_converged =============
+Parameters: theta: 0.5, max_outer_iters: 50, out_dir: ./seed_based_outputs/run_40.0_percent_logs, save_every_iter: False
+length of mapping: 2096
+Number of nodes_a_list: 5242
+Number of nodes_u_list: 5242
+======== Propagation outer iteration 1 ========
+Previous mapping size: 2096
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 2096, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 2096
+Ga->Gu added 1630 new pairs; total mapped now 3726
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 3726
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 3726, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3726
+propagation_step --> length of inv_map: 3948, new2: 222
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 222 new pairs; total mapped now 3948
+1852 new pairs added in 1 outer iteration.
+From 2096 to total: 3948 in 1 outer iteration. continue ...
+
+
+======== Propagation outer iteration 2 ========
+Previous mapping size: 3948
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 3948, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3948
+Ga->Gu added 26 new pairs; total mapped now 3974
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 3974
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 3974, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3974
+propagation_step --> length of inv_map: 3980, new2: 6
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 6 new pairs; total mapped now 3980
+32 new pairs added in 2 outer iteration.
+From 3948 to total: 3980 in 2 outer iteration. continue ...
+
+
+======== Propagation outer iteration 3 ========
+Previous mapping size: 3980
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 3980, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3980
+Ga->Gu added 2 new pairs; total mapped now 3982
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 3982
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 3982, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3982
+propagation_step --> length of inv_map: 3982, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 3982
+2 new pairs added in 3 outer iteration.
+From 3980 to total: 3982 in 3 outer iteration. continue ...
+
+
+======== Propagation outer iteration 4 ========
+Previous mapping size: 3982
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 3982, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3982
+Ga->Gu added 0 new pairs; total mapped now 3982
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 3982
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 3982, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3982
+propagation_step --> length of inv_map: 3982, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 3982
+No new pairs added in this outer iteration. Converged.
+Completed: run_propagation_until_converged for the seed percentage: 40.0 percent
+
+Percentage=40.0, TP=3982, Total final mapping=3982,  Precision=1.0000, Recall=0.7596, Accuracy=0.7596====
+
+
+
+
+==================== Evaluation Run 50.0 percent =============
+seed map: length of seed_count: 2621
+Saved 2621 random seeds to ./seed_based_outputs/random_50.0_percent_seeds.txt
+
+Entering: run_propagation_until_converged ...
+============Inside run_propagation_until_converged =============
+Parameters: theta: 0.5, max_outer_iters: 50, out_dir: ./seed_based_outputs/run_50.0_percent_logs, save_every_iter: False
+length of mapping: 2621
+Number of nodes_a_list: 5242
+Number of nodes_u_list: 5242
+======== Propagation outer iteration 1 ========
+Previous mapping size: 2621
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 2621, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 2621
+Ga->Gu added 1553 new pairs; total mapped now 4174
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 4174
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 4174, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4174
+propagation_step --> length of inv_map: 4273, new2: 99
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 99 new pairs; total mapped now 4273
+1652 new pairs added in 1 outer iteration.
+From 2621 to total: 4273 in 1 outer iteration. continue ...
+
+
+======== Propagation outer iteration 2 ========
+Previous mapping size: 4273
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 4273, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4273
+Ga->Gu added 12 new pairs; total mapped now 4285
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 4285
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 4285, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4285
+propagation_step --> length of inv_map: 4287, new2: 2
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 2 new pairs; total mapped now 4287
+14 new pairs added in 2 outer iteration.
+From 4273 to total: 4287 in 2 outer iteration. continue ...
+
+
+======== Propagation outer iteration 3 ========
+Previous mapping size: 4287
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 4287, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4287
+Ga->Gu added 0 new pairs; total mapped now 4287
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 4287
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 4287, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4287
+propagation_step --> length of inv_map: 4287, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 4287
+No new pairs added in this outer iteration. Converged.
+Completed: run_propagation_until_converged for the seed percentage: 50.0 percent
+
+Percentage=50.0, TP=4287, Total final mapping=4287,  Precision=1.0000, Recall=0.8178, Accuracy=0.8178====
+
+
+
+
+==================== Evaluation Run 60.0 percent =============
+seed map: length of seed_count: 3145
+Saved 3145 random seeds to ./seed_based_outputs/random_60.0_percent_seeds.txt
+
+Entering: run_propagation_until_converged ...
+============Inside run_propagation_until_converged =============
+Parameters: theta: 0.5, max_outer_iters: 50, out_dir: ./seed_based_outputs/run_60.0_percent_logs, save_every_iter: False
+length of mapping: 3145
+Number of nodes_a_list: 5242
+Number of nodes_u_list: 5242
+======== Propagation outer iteration 1 ========
+Previous mapping size: 3145
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 3145, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3145
+Ga->Gu added 1331 new pairs; total mapped now 4476
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 4476
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 4476, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4476
+propagation_step --> length of inv_map: 4538, new2: 62
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 62 new pairs; total mapped now 4538
+1393 new pairs added in 1 outer iteration.
+From 3145 to total: 4538 in 1 outer iteration. continue ...
+
+
+======== Propagation outer iteration 2 ========
+Previous mapping size: 4538
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 4538, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4538
+Ga->Gu added 5 new pairs; total mapped now 4543
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 4543
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 4543, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4543
+propagation_step --> length of inv_map: 4543, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 4543
+5 new pairs added in 2 outer iteration.
+From 4538 to total: 4543 in 2 outer iteration. continue ...
+
+
+======== Propagation outer iteration 3 ========
+Previous mapping size: 4543
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 4543, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4543
+Ga->Gu added 0 new pairs; total mapped now 4543
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 4543
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 4543, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4543
+propagation_step --> length of inv_map: 4543, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 4543
+No new pairs added in this outer iteration. Converged.
+Completed: run_propagation_until_converged for the seed percentage: 60.0 percent
+
+Percentage=60.0, TP=4543, Total final mapping=4543,  Precision=1.0000, Recall=0.8667, Accuracy=0.8667====
+
+
+
+
+==================== Evaluation Run 70.0 percent =============
+seed map: length of seed_count: 3669
+Saved 3669 random seeds to ./seed_based_outputs/random_70.0_percent_seeds.txt
+
+Entering: run_propagation_until_converged ...
+============Inside run_propagation_until_converged =============
+Parameters: theta: 0.5, max_outer_iters: 50, out_dir: ./seed_based_outputs/run_70.0_percent_logs, save_every_iter: False
+length of mapping: 3669
+Number of nodes_a_list: 5242
+Number of nodes_u_list: 5242
+======== Propagation outer iteration 1 ========
+Previous mapping size: 3669
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 3669, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 3669
+Ga->Gu added 1109 new pairs; total mapped now 4778
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 4778
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 4778, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4778
+propagation_step --> length of inv_map: 4814, new2: 36
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 36 new pairs; total mapped now 4814
+1145 new pairs added in 1 outer iteration.
+From 3669 to total: 4814 in 1 outer iteration. continue ...
+
+
+======== Propagation outer iteration 2 ========
+Previous mapping size: 4814
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 4814, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4814
+Ga->Gu added 0 new pairs; total mapped now 4814
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 4814
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 4814, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4814
+propagation_step --> length of inv_map: 4814, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 4814
+No new pairs added in this outer iteration. Converged.
+Completed: run_propagation_until_converged for the seed percentage: 70.0 percent
+
+Percentage=70.0, TP=4814, Total final mapping=4814,  Precision=1.0000, Recall=0.9184, Accuracy=0.9184====
+
+
+
+
+==================== Evaluation Run 80.0 percent =============
+seed map: length of seed_count: 4193
+Saved 4193 random seeds to ./seed_based_outputs/random_80.0_percent_seeds.txt
+
+Entering: run_propagation_until_converged ...
+============Inside run_propagation_until_converged =============
+Parameters: theta: 0.5, max_outer_iters: 50, out_dir: ./seed_based_outputs/run_80.0_percent_logs, save_every_iter: False
+length of mapping: 4193
+Number of nodes_a_list: 5242
+Number of nodes_u_list: 5242
+======== Propagation outer iteration 1 ========
+Previous mapping size: 4193
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 4193, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4193
+Ga->Gu added 805 new pairs; total mapped now 4998
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 4998
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 4998, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4998
+propagation_step --> length of inv_map: 5010, new2: 12
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 12 new pairs; total mapped now 5010
+817 new pairs added in 1 outer iteration.
+From 4193 to total: 5010 in 1 outer iteration. continue ...
+
+
+======== Propagation outer iteration 2 ========
+Previous mapping size: 5010
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 5010, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 5010
+Ga->Gu added 0 new pairs; total mapped now 5010
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 5010
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 5010, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 5010
+propagation_step --> length of inv_map: 5010, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 5010
+No new pairs added in this outer iteration. Converged.
+Completed: run_propagation_until_converged for the seed percentage: 80.0 percent
+
+Percentage=80.0, TP=5010, Total final mapping=5010,  Precision=1.0000, Recall=0.9557, Accuracy=0.9557====
+
+
+
+
+==================== Evaluation Run 90.0 percent =============
+seed map: length of seed_count: 4717
+Saved 4717 random seeds to ./seed_based_outputs/random_90.0_percent_seeds.txt
+
+Entering: run_propagation_until_converged ...
+============Inside run_propagation_until_converged =============
+Parameters: theta: 0.5, max_outer_iters: 50, out_dir: ./seed_based_outputs/run_90.0_percent_logs, save_every_iter: False
+length of mapping: 4717
+Number of nodes_a_list: 5242
+Number of nodes_u_list: 5242
+======== Propagation outer iteration 1 ========
+Previous mapping size: 4717
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 4717, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 4717
+Ga->Gu added 427 new pairs; total mapped now 5144
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 5144
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 5144, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 5144
+propagation_step --> length of inv_map: 5145, new2: 1
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 1 new pairs; total mapped now 5145
+428 new pairs added in 1 outer iteration.
+From 4717 to total: 5145 in 1 outer iteration. continue ...
+
+
+======== Propagation outer iteration 2 ========
+Previous mapping size: 5145
+
+=======Entering: propagation_step for the Ga --> Gu pass ===========
+============inside propagation_step===========
+received length of mapping: 5145, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 5145
+Ga->Gu added 0 new pairs; total mapped now 5145
+=======Completed: propagation_step for the Ga --> Gu pass ===========
+
+invert_mapping --> 
+invert_mapping --> length of inv_map: 5145
+=======Entering: propagation_step for the Gu --> Ga pass ===========
+============inside propagation_step===========
+received length of mapping: 5145, theta: 0.5, length of nodes_r_list: 5242
+Initial new_pairs: 0, length of mapped_targets: 5145
+propagation_step --> length of inv_map: 5145, new2: 0
+=======Completed: propagation_step for the Gu --> Ga pass ===========
+
+invert_mapping back to original --> 
+invert_mapping --> Gu->Ga added 0 new pairs; total mapped now 5145
+No new pairs added in this outer iteration. Converged.
+Completed: run_propagation_until_converged for the seed percentage: 90.0 percent
+
+Percentage=90.0, TP=5145, Total final mapping=5145,  Precision=1.0000, Recall=0.9815, Accuracy=0.9815====
+
+
+
+Saved evaluation summary to ./seed_based_outputs/seed_percentage_wise_brute_force_eval_summary.csv

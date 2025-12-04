@@ -57,6 +57,37 @@ def normalize_features(features_dict):
     # Return dictionary
     return {node: vec for node, vec in zip(nodes, X_norm)}
 
+# Hungarian Algorithm for Unique Mapping
+# K controls how many nodes (top-degree) to match
+# ------------------------------------------------------------
+def hungarian_initial_mapping(G1, G2, nodes1, nodes2, sim_matrix, K=300):
+
+    # Step 1: pick top-K degree nodes in both graphs
+    top1 = sorted(G1.degree(), key=lambda x: x[1], reverse=True)[:K]
+    top2 = sorted(G2.degree(), key=lambda x: x[1], reverse=True)[:K]
+
+    top1_nodes = [n for n, _ in top1]
+    top2_nodes = [n for n, _ in top2]
+
+    # extract sub-similarity matrix between top nodes only
+    idx1 = [nodes1.index(n) for n in top1_nodes]
+    idx2 = [nodes2.index(n) for n in top2_nodes]
+
+    S = sim_matrix[np.ix_(idx1, idx2)]
+
+    # Convert similarity → cost (Hungarian minimizes cost)
+    cost = -S  # maximize similarity = minimize negative similarity
+
+    # Hungarian algorithm (optimal 1-to-1 assignment)
+    row_ind, col_ind = linear_sum_assignment(cost)
+
+    mapping = {}
+    for r, c in zip(row_ind, col_ind):
+        g1_node = top1_nodes[r]
+        g2_node = top2_nodes[c]
+        mapping[g1_node] = g2_node
+
+    return mapping
 
 # ------------------------------------------------------------
 # Compute similarity matrix between G1 and G2
@@ -99,37 +130,7 @@ def build_similarity(features1, features2):
 
 #     return mapping
 # ------------------------------------------------------------
-# Hungarian Algorithm for Unique Mapping
-# K controls how many nodes (top-degree) to match
-# ------------------------------------------------------------
-def hungarian_initial_mapping(G1, G2, nodes1, nodes2, sim_matrix, K=300):
 
-    # Step 1: pick top-K degree nodes in both graphs
-    top1 = sorted(G1.degree(), key=lambda x: x[1], reverse=True)[:K]
-    top2 = sorted(G2.degree(), key=lambda x: x[1], reverse=True)[:K]
-
-    top1_nodes = [n for n, _ in top1]
-    top2_nodes = [n for n, _ in top2]
-
-    # extract sub-similarity matrix between top nodes only
-    idx1 = [nodes1.index(n) for n in top1_nodes]
-    idx2 = [nodes2.index(n) for n in top2_nodes]
-
-    S = sim_matrix[np.ix_(idx1, idx2)]
-
-    # Convert similarity → cost (Hungarian minimizes cost)
-    cost = -S  # maximize similarity = minimize negative similarity
-
-    # Hungarian algorithm (optimal 1-to-1 assignment)
-    row_ind, col_ind = linear_sum_assignment(cost)
-
-    mapping = {}
-    for r, c in zip(row_ind, col_ind):
-        g1_node = top1_nodes[r]
-        g2_node = top2_nodes[c]
-        mapping[g1_node] = g2_node
-
-    return mapping
 
 
 # ------------------------------------------------------------

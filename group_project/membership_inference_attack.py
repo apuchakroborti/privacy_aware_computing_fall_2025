@@ -12,11 +12,12 @@ import torch.optim as optim
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch.utils.data import DataLoader
 from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score, f1_score, confusion_matrix, classification_report
+import torch.nn.functional as F
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 import utils as UTIL
-import torch.nn.functional as F
+
 
 
 # Loading data and model
@@ -287,8 +288,25 @@ def attack_victim(attack_model, victim_model, member_ds, nonmember_ds, batch_siz
     # results['balanced_accuracy'] = balanced_accuracy_score(y_true, y_pred)
 
     print(f"\nVictim attack accuracy: {results['accuracy']*100:.2f}% ROC AUC: {results['roc_auc']*100:.2f}%")
+    save_mia_results(probs, f"./saved_data/mia_lm_results.txt")
+
+
     return results, probs, y_true
 
+def save_mia_results(probs, output_path="mia_lm_results.txt", threshold=0.5):
+    """
+    Save predictions in required format:
+    <id> <member>
+    where id = index of sample, member = 1 or 0.
+    """
+
+    y_pred = (probs > threshold).astype(int)
+
+    with open(output_path, "w") as f:
+        for idx, pred in enumerate(y_pred):
+            f.write(f"{idx} {pred}\n")
+
+    print(f"[+] Saved MIA prediction file to {output_path}")
 
 
 def run_loss_based_mia(
@@ -354,9 +372,10 @@ attack_model, results = run_loss_based_mia(
     shadow_source_ds=shadow_source_ds,
     target_member_ds=target_member_ds,
     target_nonmember_ds=target_nonmember_ds,
-    # num_shadows=5,
-    num_shadows=3,
-    shadow_train_frac=0.5,
+    num_shadows=5,
+    # num_shadows=3,
+    # shadow_train_frac=0.5,
+    shadow_train_frac=0.05,
     shadow_noise_rate=0.02,
     # shadow_epochs=5,
     shadow_epochs=10,

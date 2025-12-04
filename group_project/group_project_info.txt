@@ -1,5 +1,6 @@
 Project A — Membership Inference Attack — LM (DistilBERT / Partial AG News)
-You are given a trained victim model (victim_model_distilbert_agnews) for AG News (4 classes) and a shadow pool (sampled.csv) of unlabeled or labeled examples drawn from the same distribution as the victim training data.
+You are given a trained victim model (victim_model_distilbert_agnews) for AG News (4 classes) and a shadow pool (sampled.csv) of 
+unlabeled or labeled examples drawn from the same distribution as the victim training data.
 
 Your task is to implement membership inference attacks. Produce per-sample member/non-member predictions in the required format.
 
